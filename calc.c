@@ -26,11 +26,9 @@ int calc(int l_op, char znak, int r_op){
     }
 }
 
-<<<<<<< HEAD
+
 //Функция преобразования результирующей текстовой строки
 
 char decrypt(int res, int k) { 
     return (char)(res - k); 
 }
-=======
->>>>>>> 660069dc74f50b238317d84aa1ac0d300d3c3a8b

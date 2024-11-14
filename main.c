@@ -41,9 +41,22 @@ int main(int argc, char *argv[]){
         }
     }
 
+    printf("\nРезультирующая строка:\n");
 
+    char *res_stroka = (char *)malloc((res_cnt + 1) * sizeof(char));
+    if (!res_stroka) {
+        printf("Массив не инициализировался\n");
+        free(results);
+        return 1;
+    }
 
+    for (int j = 0; j < res_cnt; j++) {
+        res_stroka[j] = decrypt(results[j], k);
+        printf("%c", res_stroka[j]);
+    }
+    res_stroka[res_cnt] = '\0';
+    free(results);
+    free(res_stroka);
 
-
-
+    return 0;
 }
