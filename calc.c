@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include <string.h>
-#include <ctype.h>
+#include<string.h>
+#include<ctype.h>
 #include"calc.h"
 
 //Функция для вычисления результата
@@ -30,5 +30,5 @@ int calc(int l_op, char znak, int r_op){
 //Функция преобразования результирующей текстовой строки
 
 char decrypt(int res, int k) { 
-    return (char)(res - k); 
+    return (char)(res - k);
 }

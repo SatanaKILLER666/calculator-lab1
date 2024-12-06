@@ -4,6 +4,7 @@ HEADER	= calc.h
 OUT	= output/calculator
 FLAGS	= -g -c 
 CC	= gcc
+ARGUM = ""
 
 all:	output/calculator
 
@@ -17,4 +18,6 @@ clean:
 	rm -f $(OBJS) $(OUT)
 
 run: output/calculator
-	./output/calculator
+	make clean
+	make
+	./output/calculator $(ARGUM)
