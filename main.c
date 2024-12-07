@@ -23,19 +23,32 @@ int main(int argc, char *argv[]){
     int k = -1;
     int res_cnt = 0;
     int i = 1;
-    while (i < argc) {
+
+
+    while (i < argc){
         if (strcmp(argv[i], "-k") == 0 && i + 1 < argc) {
             k = atoi(argv[i + 1]);
-            break;
+            char *last_symb_key;
+            strtoll(argv[i + 1], &last_symb_key, 10);
+
+            if(*last_symb_key == '\0'){
+                break;
+            }
+            else{
+                printf("Неверное значение ключа дешифрования\n");
+                return 1;
+            }
         }
-        i++;
+    i++;
     }
 
-    if(k == -1) {
-        printf("Неверный флаг или значение.");
+
+    if(k == -1){
+        printf("Неверный флаг или значение.\n");
         return 1;
     }
     i = 1;
+
     while (i + 2 < argc){
         if(i + 2 < argc){
             int l_op = atoi(argv[i]);
